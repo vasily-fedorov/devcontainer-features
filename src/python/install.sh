@@ -18,6 +18,8 @@ su - $USERNAME << EOF
 
 curl https://pyenv.run | bash
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> /home/$USERNAME/.bashrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> /home/$USERNAME/.bashrc
 echo 'eval "$(pyenv init - bash)"' >> /home/$USERNAME/.bashrc
