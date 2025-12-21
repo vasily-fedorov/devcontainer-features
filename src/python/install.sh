@@ -17,7 +17,7 @@ export PYTHONASYNCIODEBUG=1
 su - $USERNAME << EOF
 
 curl https://pyenv.run | bash
-
+export PYENV_ROOT="$HOME/.pyenv"
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> /home/$USERNAME/.bashrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> /home/$USERNAME/.bashrc
 echo 'eval "$(pyenv init - bash)"' >> /home/$USERNAME/.bashrc
